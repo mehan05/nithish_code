@@ -6,28 +6,28 @@ import { Container, ShieldCheck, ThermometerSnowflake, Microscope, Truck, Star }
 export default function InfrastructurePage() {
   const specs = [
     {
-      title: "Bulk Dry Grains Silos",
-      desc: "Our automated silos support modern pre-cleaning, laser-sorting, and humidity control to eliminate moisture fluctuations in premium rice grains.",
+      title: "Trusted Supplier Network",
+      desc: "We work directly with established farming cooperatives and local aggregators to ensure consistent supply of high-quality agricultural products.",
       icon: Container,
-      details: ["Capacity: 25,000 Metric Tons", "Moisture grading: Laser automated", "Ingress protection: IP54 hermetic seals"]
+      details: ["Direct farm engagement", "Ethical procurement", "Traceable sourcing"]
     },
     {
-      title: "Cold Chain Logistics Zones",
-      desc: "Specially calibrated storage modules designed to hold raw wild forest honey and perishable coconut derivatives without losing active nutrient values.",
+      title: "Export Packaging Support",
+      desc: "Partnering with certified packaging facilities to ensure products are sorted, cleaned, and packed to meet international import requirements.",
       icon: ThermometerSnowflake,
-      details: ["Temperature range: 2°C to 8°C", "Hygrometer feedback: Digital telemetry", "Aerosol cleaning: HEPA certified filters"]
+      details: ["Export-grade materials", "Moisture-controlled packing", "Custom branding options"]
     },
     {
-      title: "Phytosanitary & Grading Labs",
-      desc: "In-house lab technicians conduct regular batches testing, verifying curcumin contents in spices and moisture levels in coir fibers.",
+      title: "Quality Inspection Process",
+      desc: "Every batch undergoes rigorous pre-shipment inspections by certified third-party agencies to guarantee adherence to global standards.",
       icon: Microscope,
-      details: ["Purity testing: Refractometer and HPLC", "Pest controls: Eco-friendly ozone treatment", "Batch tracking: QR-coded logistics tags"]
+      details: ["Third-party lab testing", "Phytosanitary checks", "Visual & mechanical grading"]
     },
     {
-      title: "Maritime Shipping Pipeline",
-      desc: "Direct customs filing terminals connect Chennai port hubs directly with our packing facilities, reducing handling times.",
+      title: "Chennai Port Logistics Coordination",
+      desc: "Strategic coordination with freight forwarders at major ports ensures smooth customs clearance and timely vessel loading.",
       icon: Truck,
-      details: ["Port transit time: Less than 4 hours", "Customs clearance: ICEGATE authorized", "Container loading: Verified weight scaling"]
+      details: ["Efficient customs handling", "Direct port connectivity", "Reliable transit schedules"]
     }
   ];
 
@@ -38,13 +38,13 @@ export default function InfrastructurePage() {
       <div className="bg-secondary/40 border-b border-border/50 py-16 text-center">
         <div className="container mx-auto px-4">
           <span className="px-3.5 py-1 bg-white text-primary text-xs font-bold uppercase tracking-wider rounded-full border border-primary/10">
-            Silos & Warehousing
+            Sourcing & Logistics
           </span>
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-slate-900 mt-3">
-            Our Processing Infrastructure
+            Sourcing & Logistics Network
           </h1>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto mt-2 leading-relaxed">
-            State-of-the-art grading machinery, temperature-zoned warehouses, and custom packaging silos.
+            Reliable sourcing channels, quality inspections, and streamlined export logistics.
           </p>
         </div>
       </div>
@@ -56,10 +56,10 @@ export default function InfrastructurePage() {
           
           <div className="flex flex-col gap-6">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 leading-snug">
-              Ensuring 100% Export-Ready Agronomic Compliance
+              Ensuring Export-Ready Quality & Compliance
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Plentra Exports maintains centralized sourcing depots near Chennai port corridors, allowing us to load containers immediately after packing. Our machinery line carries ISO 22000, HACCP, and phytosanitary validations to ensure that all bulk exports satisfy foreign custom standards.
+              Plentra Exports coordinates closely with trusted sourcing networks and packaging facilities near Chennai port corridors. We ensure that our export processes align with ISO 22000, HACCP, and phytosanitary validations to meet foreign custom standards.
             </p>
             <div className="flex items-center gap-2 text-emerald-600 text-xs font-bold bg-emerald-100/80 px-4 py-2.5 rounded-xl self-start">
               <ShieldCheck className="w-4.5 h-4.5" />
@@ -69,25 +69,25 @@ export default function InfrastructurePage() {
 
           <div className="bg-secondary/30 rounded-2xl border border-primary/15 p-8 flex flex-col gap-4">
             <h3 className="font-serif text-lg font-bold text-slate-900 border-b border-border pb-3">
-              HQ Storage Matrix Specs
+              Logistics Hub Features
             </h3>
             
             <div className="flex flex-col gap-3 text-xs">
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Dry Warehouse Area:</span>
-                <span className="font-semibold text-slate-800">55,000 Square Feet</span>
+                <span className="text-muted-foreground">Primary Sourcing Regions:</span>
+                <span className="font-semibold text-slate-800">Tamil Nadu, Andhra Pradesh</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Cold Storage Capacity:</span>
-                <span className="font-semibold text-slate-800">10,000 Metric Tons</span>
+                <span className="text-muted-foreground">Packaging Hub:</span>
+                <span className="font-semibold text-slate-800">Chennai Logistics Zone</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Laser Sorting Machine:</span>
-                <span className="font-semibold text-slate-800">Buhler Double-Chamber</span>
+                <span className="text-muted-foreground">Quality Inspection:</span>
+                <span className="font-semibold text-slate-800">Pre-shipment Verification</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Logistics Port Corridors:</span>
-                <span className="font-semibold text-primary">Chennai, Tuticorin & Cochin Ports</span>
+                <span className="font-semibold text-primary">Chennai & Tuticorin Ports</span>
               </div>
             </div>
           </div>

@@ -41,7 +41,6 @@ export default function HeroSection() {
     { text: "IEC Certified",    icon: ShieldCheck },
     { text: "APEDA Registered", icon: Award },
     { text: "FSSAI Licensed",   icon: CheckCircle2 },
-    { text: "GMP Certified",    icon: FileSpreadsheet },
   ];
 
   return (
@@ -59,7 +58,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left">
 
             {/* Top tag */}
-            <div className="inline-flex self-center lg:self-start items-center gap-2 px-4 py-1.5 rounded-full bg-[#1B4332] text-[#2D6A4F] border border-[#2D6A4F]/40 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex self-center lg:self-start items-center gap-2 px-4 py-1.5 rounded-full bg-[#1B4332] text-white border border-[#2D6A4F]/40 text-xs font-semibold uppercase tracking-wider">
               🌟 Globally Trusted Agricultural Exporter
             </div>
 
@@ -72,8 +71,8 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-lg text-[#40916C] max-w-xl leading-relaxed">
-              Premium quality grains, organic spices, fresh coconuts, raw forest honey, and custom
-              cotton garments — sourced directly from Indian farms and delivered worldwide with
+              Premium quality onions, organic spices, dry red chillies, peanuts, and potatoes
+              — sourced directly from Indian farms and delivered worldwide with
               absolute compliance.
             </p>
 
@@ -122,7 +121,7 @@ export default function HeroSection() {
                 Export Reach
               </span>
               <span className="px-2.5 py-0.5 bg-[#1B4332] text-white text-[10px] font-bold rounded-full uppercase tracking-wider">
-                48+ Countries
+                Global Reach
               </span>
             </div>
 
@@ -147,7 +146,7 @@ export default function HeroSection() {
             <div className="w-full max-w-[420px] flex items-center justify-between border-t border-[#D8F3DC] pt-4">
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest font-semibold text-[#40916C]">Delivery</span>
-                <span className="text-sm font-bold text-[#0F2D1E]">14–18 Days CIF</span>
+                <span className="text-sm font-bold text-[#0F2D1E]">Reliable Transit</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-[10px] uppercase tracking-widest font-semibold text-[#40916C]">Sorting</span>

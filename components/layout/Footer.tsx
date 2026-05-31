@@ -47,7 +47,7 @@ export default function Footer() {
               <span className="font-serif text-xl font-bold tracking-tight">Plentra Exports</span>
             </div>
             <p className="text-sm text-white/65 leading-relaxed">
-              India's premium certified exporter of organic commodities, spices, high-grade grains, coconuts, and custom cotton textiles. Delivering globally with absolute compliance.
+              India's premium certified exporter of agricultural commodities, spices, onions, and peanuts. Delivering globally with absolute compliance.
             </p>
             <div className="flex items-center gap-3 mt-2">
               <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2D6A4F] text-white transition-all duration-200" aria-label="Facebook">
@@ -91,11 +91,11 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-[#2D6A4F] font-serif text-lg font-semibold tracking-wide">Products</h4>
             <ul className="flex flex-col gap-2.5 text-sm text-white/70">
-              <li><Link href="/products/premium-rice" className="hover:text-[#2D6A4F] transition-colors">Premium Rice Varieties</Link></li>
-              <li><Link href="/products/indian-spices" className="hover:text-[#2D6A4F] transition-colors">Indian Spices & Aromatics</Link></li>
-              <li><Link href="/products/coconut-products" className="hover:text-[#2D6A4F] transition-colors">Organic Coconut</Link></li>
-              <li><Link href="/products/wild-forest-honey" className="hover:text-[#2D6A4F] transition-colors">Wild Forest Honey</Link></li>
-              <li><Link href="/products/cotton-garments" className="hover:text-[#2D6A4F] transition-colors">Cotton Garments & OEM</Link></li>
+              <li><Link href="/products/fresh-red-onion" className="hover:text-[#2D6A4F] transition-colors">Fresh Red Onion</Link></li>
+              <li><Link href="/products/premium-turmeric-finger" className="hover:text-[#2D6A4F] transition-colors">Premium Turmeric</Link></li>
+              <li><Link href="/products/dry-red-chilli" className="hover:text-[#2D6A4F] transition-colors">Dry Red Chilli</Link></li>
+              <li><Link href="/products/raw-bold-peanuts" className="hover:text-[#2D6A4F] transition-colors">Raw Bold Peanuts</Link></li>
+              <li><Link href="/products" className="hover:text-[#2D6A4F] transition-colors">View All Products</Link></li>
             </ul>
           </div>
 

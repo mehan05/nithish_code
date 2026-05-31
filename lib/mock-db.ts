@@ -25,6 +25,7 @@ export interface Certification {
   description: string;
   badgeColor: string;
   iconType: string;
+  documentUrl?: string;
 }
 
 export interface QuoteSubmission {
@@ -158,7 +159,7 @@ export const mockProducts: Product[] = [
     slug: "natural-tamarind",
     category: "spices",
     badge: "Fiberless Grade",
-    image: "https://images.unsplash.com/photo-1590005354167-6da97870c913?auto=format&fit=crop&q=80&w=800",
+    image: "/tamarind.jpg",
     description: "Naturally sour and tangy, our export-grade tamarind is processed to remove seeds and fibers under high-standard hygienic conditions. Perfect for international food processing.",
     keyFeatures: [
       "Seed Content: Less than 1-2% Max",
@@ -261,7 +262,8 @@ export const mockCertifications: Certification[] = [
     shortCode: "IEC",
     description: "Issued by the Directorate General of Foreign Trade (DGFT), Government of India. Authorizes legal cross-border commercial transactions.",
     badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    iconType: "shield"
+    iconType: "shield",
+    documentUrl: "/iec.pdf"
   },
   {
     id: "cert-2",
@@ -277,7 +279,8 @@ export const mockCertifications: Certification[] = [
     shortCode: "APEDA",
     description: "Agricultural and Processed Food Products Export Development Authority. Guarantees safety, quality, and standards compliance for food exports.",
     badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
-    iconType: "award"
+    iconType: "award",
+    documentUrl: "/rc-copy.pdf"
   },
   {
     id: "cert-4",
@@ -285,7 +288,8 @@ export const mockCertifications: Certification[] = [
     shortCode: "FSSAI",
     description: "Food Safety and Standards Authority of India central exporter registration. Confirms superior level production handling and sanitization.",
     badgeColor: "bg-green-100 text-green-800 border-green-200",
-    iconType: "check"
+    iconType: "check",
+    documentUrl: "/fssai license central.pdf"
   },
   {
     id: "cert-5",
@@ -293,7 +297,8 @@ export const mockCertifications: Certification[] = [
     shortCode: "UDYAM",
     description: "Ministry of Micro, Small and Medium Enterprises, India. Recognizes Plentra as an registered, high-capacity enterprise supplier.",
     badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
-    iconType: "briefcase"
+    iconType: "briefcase",
+    documentUrl: "/udyam-msme.pdf"
   },
   {
     id: "cert-6",
@@ -301,16 +306,10 @@ export const mockCertifications: Certification[] = [
     shortCode: "SPICE BOARD",
     description: "Registration and exporter certification from the Ministry of Commerce. Certifies chemical residue-free, grade-A pure spices.",
     badgeColor: "bg-red-100 text-red-800 border-red-200",
-    iconType: "leaf"
+    iconType: "leaf",
+    documentUrl: "/spices-board.pdf"
   },
-  {
-    id: "cert-7",
-    name: "Good Manufacturing Practices (GMP)",
-    shortCode: "GMP",
-    description: "Global quality standards certification verifying consistent high hygiene, sorting, and packaging procedures across our facilities.",
-    badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
-    iconType: "star"
-  },
+
   {
     id: "cert-8",
     name: "ICEGATE Registration",

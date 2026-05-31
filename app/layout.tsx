@@ -4,12 +4,12 @@ import PublicShell from "@/components/layout/PublicShell";
 
 export const metadata: Metadata = {
   title: "Plentra Exports | Premium Indian Agricultural Exports",
-  description: "India's trusted B2B exporter of rice, spices, honey, coconut, and garments. IEC, APEDA, & FSSAI certified. Request a bulk export quote today.",
-  keywords: ["agricultural exports", "Indian spices", "APEDA certified", "rice exporter", "coconut wholesale", "cotton Kurtas OEM", "Plentra Exports"],
+  description: "India's trusted B2B exporter of onions, spices, chillies, peanuts, and other agricultural products. IEC, APEDA, & FSSAI certified. Request a bulk export quote today.",
+  keywords: ["agricultural exports", "Indian spices", "APEDA certified", "onion exporter", "peanut wholesale", "dry red chilli", "Plentra Exports"],
   authors: [{ name: "Plentra Exports" }],
   openGraph: {
     title: "Plentra Exports | Global Agricultural Export Partner",
-    description: "Premium quality grains, spices, coconut, wild honey, and garments exported worldwide with complete compliance.",
+    description: "Premium quality onions, spices, chillies, peanuts, and other agricultural products exported worldwide with complete compliance.",
     type: "website",
     locale: "en_US",
     siteName: "Plentra Exports"

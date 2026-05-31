@@ -12,7 +12,7 @@ export default function AboutPage() {
     },
     {
       title: "Premium Graded Standards",
-      desc: "All grain silos and processing units operate double laser-sorters to verify that broken percentages satisfy foreign import regulations.",
+      desc: "All processing units operate with strict quality checks to verify that products satisfy foreign import regulations.",
       icon: Award
     },
     {
@@ -58,7 +58,7 @@ export default function AboutPage() {
               At Plentra Exports, we believe that high-quality B2B international commerce originates at the roots. We bypass middle brokers by collaborating directly with local agricultural clusters across Tamil Nadu, Andhra Pradesh, and Karnataka. This guarantees crop fresh-harvest purity, absolute sanitation, and complete compliance.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              With a state-of-the-art packing warehouse near Chennai, we process grains, spices, and fresh coconuts using double laser-sorters and temperature-regulated silos before maritime loading.
+              With dedicated packaging facilities near Chennai, we process agricultural products and spices using rigorous quality control before maritime loading.
             </p>
           </div>
 

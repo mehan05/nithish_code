@@ -32,7 +32,7 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
-    { label: "Infrastructure", href: "/infrastructure" },
+    { label: "Sourcing & Logistics", href: "/infrastructure" },
     { label: "Certifications", href: "/certifications" },
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" }

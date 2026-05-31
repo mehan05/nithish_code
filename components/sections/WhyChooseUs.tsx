@@ -6,8 +6,8 @@ import { Container, ShieldCheck, Snowflake, Globe, Landmark } from "lucide-react
 export default function WhyChooseUs() {
   const strengths = [
     {
-      title: "Bulk Export Specialist",
-      desc: "High capacity storage, automated packing silos, and streamlined logistics systems built to scale for multi-container maritime transport.",
+      title: "Export Sourcing Specialist",
+      desc: "Reliable sourcing networks and streamlined logistics systems built to scale for international maritime transport.",
       icon: Container
     },
     {
@@ -17,12 +17,12 @@ export default function WhyChooseUs() {
     },
     {
       title: "Global Market Expertise",
-      desc: "A decade of shipping expertise with localized tariff intelligence across USA, Europe, Middle East, Japan, and Singapore markets.",
+      desc: "Extensive shipping expertise with localized tariff intelligence across key international markets.",
       icon: Globe
     },
     {
       title: "Certified Supplier",
-      desc: "Rigorous standards verified by central licensing bodies: IEC, APEDA, FSSAI, Spices Board, GST, UDYAM, and international GMP audits.",
+      desc: "Rigorous standards verified by central licensing bodies: IEC, APEDA, FSSAI, Spices Board, GST, and UDYAM.",
       icon: Landmark
     }
   ];
