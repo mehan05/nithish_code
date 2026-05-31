@@ -219,8 +219,8 @@ export function Globe({
             translate: "-50% 0",
             marginBottom: 6,
             padding: "3px 8px",
-            background: "#1A365D",
-            color: "#718096",
+            background: "#1B4332",
+            color: "#2D6A4F",
             fontFamily: "'Google Sans', sans-serif",
             fontSize: "0.55rem",
             fontWeight: 700,
@@ -244,7 +244,7 @@ export function Globe({
               left: "50%",
               transform: "translate3d(-50%, -1px, 0)",
               border: "4px solid transparent",
-              borderTopColor: "#1A365D",
+              borderTopColor: "#1B4332",
             }}
           />
         </div>

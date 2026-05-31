@@ -53,21 +53,21 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
         className={cn(
           "sticky top-0 z-50 w-full transition-all duration-300",
           isScrolled
-            ? "bg-white/96 backdrop-blur-md border-b border-[#E2E8F0] py-3 shadow-md shadow-[#1A365D]/8"
-            : "bg-white py-4 border-b border-[#E2E8F0]/60"
+            ? "bg-white/96 backdrop-blur-md border-b border-[#D8F3DC] py-3 shadow-md shadow-[#1B4332]/8"
+            : "bg-white py-4 border-b border-[#D8F3DC]/60"
         )}
       >
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-[#1A365D] flex items-center justify-center transition-all duration-300 group-hover:rotate-12 shadow-sm">
-              <Leaf className="w-5 h-5 text-[#718096] fill-[#718096]/30" />
+            <div className="w-10 h-10 rounded-full bg-[#1B4332] flex items-center justify-center transition-all duration-300 group-hover:rotate-12 shadow-sm">
+              <Leaf className="w-5 h-5 text-[#2D6A4F] fill-[#2D6A4F]/30" />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-xl font-bold tracking-tight text-[#1A365D] leading-tight">
+              <span className="font-serif text-xl font-bold tracking-tight text-[#1B4332] leading-tight">
                 Plentra Exports
               </span>
-              <span className="text-[10px] tracking-wider text-[#718096] uppercase leading-none font-sans font-semibold">
+              <span className="text-[10px] tracking-wider text-[#2D6A4F] uppercase leading-none font-sans font-semibold">
                 Agricultural B2B Exporter
               </span>
             </div>
@@ -82,15 +82,15 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-[#1A365D] relative py-1",
+                    "text-sm font-medium transition-colors hover:text-[#1B4332] relative py-1",
                     isActive
-                      ? "text-[#1A365D] font-semibold"
-                      : "text-[#475569]"
+                      ? "text-[#1B4332] font-semibold"
+                      : "text-[#40916C]"
                   )}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#718096] rounded-full animate-fade-in" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#2D6A4F] rounded-full animate-fade-in" />
                   )}
                 </Link>
               );
@@ -101,14 +101,14 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={onOpenBrochureModal}
-              className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-[#1A365D] text-[#1A365D] hover:bg-[#F1F5F9] text-sm font-medium rounded-full transition-all hover:-translate-y-0.5 duration-200"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 border-2 border-[#1B4332] text-[#1B4332] hover:bg-[#F7F9F7] text-sm font-medium rounded-full transition-all hover:-translate-y-0.5 duration-200"
             >
               <Download className="w-4 h-4" />
               Brochure
             </button>
             <button
               onClick={onOpenQuoteModal}
-              className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#718096] hover:bg-[#4A5568] text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 duration-200"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#2D6A4F] hover:bg-[#2D6A4F] text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 duration-200"
             >
               <MessageSquare className="w-4 h-4" />
               Get in Touch
@@ -118,7 +118,7 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
           {/* Mobile Hamburger Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-[#475569] hover:text-[#1A365D] hover:bg-[#F1F5F9] rounded-full transition-colors"
+            className="lg:hidden p-2 text-[#40916C] hover:text-[#1B4332] hover:bg-[#F7F9F7] rounded-full transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -136,21 +136,21 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
       >
         <div
           className={cn(
-            "fixed top-0 right-0 z-50 h-full w-4/5 max-w-sm bg-white shadow-2xl flex flex-col p-6 transition-transform duration-300 transform ease-in-out border-l border-[#E2E8F0]",
+            "fixed top-0 right-0 z-50 h-full w-4/5 max-w-sm bg-white shadow-2xl flex flex-col p-6 transition-transform duration-300 transform ease-in-out border-l border-[#D8F3DC]",
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex items-center justify-between border-b border-[#E2E8F0] pb-4 mb-6">
+          <div className="flex items-center justify-between border-b border-[#D8F3DC] pb-4 mb-6">
             <Link href="/" className="flex items-center gap-2" onClick={handleLinkClick}>
-              <div className="w-8 h-8 rounded-full bg-[#1A365D] flex items-center justify-center">
-                <Leaf className="w-4 h-4 text-[#718096]" />
+              <div className="w-8 h-8 rounded-full bg-[#1B4332] flex items-center justify-center">
+                <Leaf className="w-4 h-4 text-[#2D6A4F]" />
               </div>
-              <span className="font-serif text-lg font-bold text-[#1A365D]">Plentra Exports</span>
+              <span className="font-serif text-lg font-bold text-[#1B4332]">Plentra Exports</span>
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-1.5 text-[#475569] hover:text-[#1A365D] hover:bg-[#F1F5F9] rounded-full"
+              className="p-1.5 text-[#40916C] hover:text-[#1B4332] hover:bg-[#F7F9F7] rounded-full"
             >
               <X className="w-5 h-5" />
             </button>
@@ -167,8 +167,8 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
                   className={cn(
                     "text-base font-medium py-2 px-3 rounded-lg transition-colors",
                     isActive
-                      ? "bg-[#F1F5F9] text-[#1A365D] font-semibold border-l-2 border-[#718096]"
-                      : "text-[#475569] hover:bg-[#F1F5F9] hover:text-[#1A365D]"
+                      ? "bg-[#F7F9F7] text-[#1B4332] font-semibold border-l-2 border-[#2D6A4F]"
+                      : "text-[#40916C] hover:bg-[#F7F9F7] hover:text-[#1B4332]"
                   )}
                 >
                   {link.label}
@@ -183,7 +183,7 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
                 setIsMobileMenuOpen(false);
                 onOpenBrochureModal();
               }}
-              className="flex w-full items-center justify-center gap-2 px-4 py-3 border-2 border-[#1A365D] text-[#1A365D] hover:bg-[#F1F5F9] text-base font-medium rounded-full transition-colors"
+              className="flex w-full items-center justify-center gap-2 px-4 py-3 border-2 border-[#1B4332] text-[#1B4332] hover:bg-[#F7F9F7] text-base font-medium rounded-full transition-colors"
             >
               <Download className="w-5 h-5" />
               Brochure
@@ -193,7 +193,7 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
                 setIsMobileMenuOpen(false);
                 onOpenQuoteModal();
               }}
-              className="flex w-full items-center justify-center gap-2 px-4 py-3 bg-[#718096] hover:bg-[#4A5568] text-white text-base font-semibold rounded-full transition-colors shadow-md"
+              className="flex w-full items-center justify-center gap-2 px-4 py-3 bg-[#2D6A4F] hover:bg-[#2D6A4F] text-white text-base font-semibold rounded-full transition-colors shadow-md"
             >
               <MessageSquare className="w-5 h-5" />
               Get in Touch

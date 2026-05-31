@@ -22,9 +22,9 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  /* Gold & forest tokens */
-  --color-gold: #C8942A;
-  --color-gold-light: #E8B94A;
+  /* Accent green & forest tokens */
+  --color-gold: #22c55e;
+  --color-gold-light: #4ade80;
   --color-forest-dark: #0F2D1E;
   --color-forest-mid: #1B4332;
 
@@ -35,7 +35,7 @@
 }
 
 :root {
-  /* === DARK GREEN / WHITE / GOLD THEME === */
+  /* === PURE GREEN / WHITE THEME === */
   --background: #F7F9F7;
   --foreground: #0F2D1E;
   --card: #ffffff;
@@ -48,14 +48,14 @@
   /* Subtle sage tint for secondary backgrounds */
   --secondary: #EAF2EC;
   --secondary-foreground: #1B4332;
-  /* Rich gold as accent */
-  --accent: #C8942A;
+  /* Vibrant leaf green as accent */
+  --accent: #22c55e;
   --accent-foreground: #ffffff;
   --muted: #F2F5F2;
   --muted-foreground: #4E6355;
   --border: #C8D8CC;
   --input: #DCE8DF;
-  --ring: #C8942A;
+  --ring: #22c55e;
   --radius: 1rem;
 
   --font-sans: 'Google Sans', sans-serif;
@@ -89,7 +89,7 @@
 .glass-card {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(200, 148, 42, 0.22);
+  border: 1px solid rgba(34, 197, 94, 0.22);
   box-shadow: 0 4px 30px rgba(27, 67, 50, 0.08);
 }
 
@@ -103,10 +103,10 @@
   box-shadow: 0 10px 30px -15px rgba(27, 67, 50, 0.18);
 }
 
-/* ===== GOLD DIVIDER LINE ===== */
+/* ===== GREEN DIVIDER LINE ===== */
 .gold-rule {
   height: 3px;
-  background: linear-gradient(90deg, transparent, #C8942A 30%, #E8B94A 50%, #C8942A 70%, transparent);
+  background: linear-gradient(90deg, transparent, #22c55e 30%, #4ade80 50%, #22c55e 70%, transparent);
   border-radius: 9999px;
 }
 
@@ -141,15 +141,15 @@
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, #C8942A 0%, #E8B94A 100%);
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(200, 148, 42, 0.3);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.3);
 }
 
 .btn-gold:hover {
-  background: linear-gradient(135deg, #A87820 0%, #C8942A 100%);
+  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(200, 148, 42, 0.4);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
 }
 
 .btn-secondary-green {
@@ -163,9 +163,9 @@
   transform: translateY(-2px);
 }
 
-/* ===== GOLD ACCENT BADGE ===== */
+/* ===== ACCENT BADGE ===== */
 .gold-badge {
-  background: linear-gradient(135deg, #C8942A 0%, #E8B94A 100%);
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -173,7 +173,7 @@
 
 /* ===== SECTION LABEL PILL ===== */
 .section-pill {
-  background: linear-gradient(135deg, rgba(27, 67, 50, 0.08) 0%, rgba(200, 148, 42, 0.1) 100%);
-  border: 1px solid rgba(200, 148, 42, 0.3);
+  background: linear-gradient(135deg, rgba(27, 67, 50, 0.08) 0%, rgba(34, 197, 94, 0.1) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
   color: var(--primary);
 }
