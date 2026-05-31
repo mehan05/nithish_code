@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-heading: var(--font-serif);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  /* Gold & forest tokens */
+  --color-gold: #C8942A;
+  --color-gold-light: #E8B94A;
+  --color-forest-dark: #0F2D1E;
+  --color-forest-mid: #1B4332;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+:root {
+  /* === DARK GREEN / WHITE / GOLD THEME === */
+  --background: #F7F9F7;
+  --foreground: #0F2D1E;
+  --card: #ffffff;
+  --card-foreground: #0F2D1E;
+  --popover: #ffffff;
+  --popover-foreground: #0F2D1E;
+  /* Deep forest green as brand primary */
+  --primary: #1B4332;
+  --primary-foreground: #ffffff;
+  /* Subtle sage tint for secondary backgrounds */
+  --secondary: #EAF2EC;
+  --secondary-foreground: #1B4332;
+  /* Rich gold as accent */
+  --accent: #C8942A;
+  --accent-foreground: #ffffff;
+  --muted: #F2F5F2;
+  --muted-foreground: #4E6355;
+  --border: #C8D8CC;
+  --input: #DCE8DF;
+  --ring: #C8942A;
+  --radius: 1rem;
+
+  --font-sans: 'Google Sans', sans-serif;
+  --font-serif: 'Google Sans', sans-serif;
+}
+
+/* Strict public pages light mode enforce */
+.public-root {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+.public-root .dark {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, .font-serif-heading {
+    @apply font-serif;
+  }
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(200, 148, 42, 0.22);
+  box-shadow: 0 4px 30px rgba(27, 67, 50, 0.08);
+}
+
+/* ===== HERO GRADIENT ===== */
+.green-gradient-bg {
+  background: radial-gradient(circle at 12% 20%, rgba(234, 242, 236, 0.9) 0%, rgba(247, 249, 247, 1) 85%);
+}
+
+/* ===== CARD SHADOW ===== */
+.subtle-shadow {
+  box-shadow: 0 10px 30px -15px rgba(27, 67, 50, 0.18);
+}
+
+/* ===== GOLD DIVIDER LINE ===== */
+.gold-rule {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #C8942A 30%, #E8B94A 50%, #C8942A 70%, transparent);
+  border-radius: 9999px;
+}
+
+/* ===== DARK FOREST SECTION ===== */
+.forest-section {
+  background: linear-gradient(135deg, #0F2D1E 0%, #1B4332 55%, #0F2D1E 100%);
+}
+
+/* ===== BUTTONS ===== */
+.btn-premium {
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary-green {
+  background-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(27, 67, 50, 0.25);
+}
+
+.btn-primary-green:hover {
+  background-color: #133427;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 67, 50, 0.35);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #C8942A 0%, #E8B94A 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(200, 148, 42, 0.3);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #A87820 0%, #C8942A 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 148, 42, 0.4);
+}
+
+.btn-secondary-green {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-secondary-green:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* ===== GOLD ACCENT BADGE ===== */
+.gold-badge {
+  background: linear-gradient(135deg, #C8942A 0%, #E8B94A 100%);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ===== SECTION LABEL PILL ===== */
+.section-pill {
+  background: linear-gradient(135deg, rgba(27, 67, 50, 0.08) 0%, rgba(200, 148, 42, 0.1) 100%);
+  border: 1px solid rgba(200, 148, 42, 0.3);
+  color: var(--primary);
+}
