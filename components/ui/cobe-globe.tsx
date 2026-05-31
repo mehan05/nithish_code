@@ -212,7 +212,6 @@ export function Globe({
           key={m.id}
           style={{
             position: "absolute",
-            // @ts-expect-error CSS Anchor Positioning API
             positionAnchor: `--cobe-${m.id}`,
             bottom: "anchor(top)",
             left: "anchor(center)",
