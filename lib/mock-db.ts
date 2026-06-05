@@ -263,7 +263,7 @@ export const mockCertifications: Certification[] = [
     description: "Issued by the Directorate General of Foreign Trade (DGFT), Government of India. Authorizes legal cross-border commercial transactions.",
     badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
     iconType: "shield",
-    documentUrl: "/iec.pdf"
+    documentUrl: "/plentra iec.pdf"
   },
   {
     id: "cert-2",
@@ -280,7 +280,7 @@ export const mockCertifications: Certification[] = [
     description: "Agricultural and Processed Food Products Export Development Authority. Guarantees safety, quality, and standards compliance for food exports.",
     badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
     iconType: "award",
-    documentUrl: "/rc-copy.pdf"
+    documentUrl: "/02 apeda.pdf"
   },
   {
     id: "cert-4",
