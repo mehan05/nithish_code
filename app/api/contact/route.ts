@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { createClient } from '@supabase/supabase-js';
 
 export async function POST(request: Request) {
   try {
@@ -23,6 +24,35 @@ export async function POST(request: Request) {
         pass: SMTP_PASS,
       },
     });
+
+    // 1. Try saving to Supabase if configured
+    const { NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY } = process.env;
+    if (NEXT_PUBLIC_SUPABASE_URL && NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      try {
+        const supabase = createClient(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY);
+        const { error } = await supabase
+          .from('inquiries')
+          .insert([
+            {
+              type,
+              company_name: companyName,
+              customer_name: customerName,
+              email: email || newsletterEmail,
+              country,
+              product_name: productName,
+              quantity,
+              message
+            }
+          ]);
+        if (error) {
+          console.error("Supabase insert error:", error);
+        } else {
+          console.log("Successfully saved inquiry to Supabase.");
+        }
+      } catch (dbErr) {
+        console.error("Failed to connect to Supabase:", dbErr);
+      }
+    }
 
     let subject = "";
     let htmlContent = "";
