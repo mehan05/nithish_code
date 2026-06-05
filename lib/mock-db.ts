@@ -184,7 +184,7 @@ export const mockProducts: Product[] = [
     slug: "raw-bold-peanuts",
     category: "nuts",
     badge: "Aflatoxin Tested",
-    image: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&q=80&w=800",
+    image: "/bold-peanuts-1554543864-4838204.webp",
     description: "Crispy, rich in proteins, and naturally sweet. Our hand-picked selected (HPS) raw peanuts undergo rigorous quality checks and aflatoxin testing to satisfy the most demanding import criteria.",
     keyFeatures: [
       "Count per Ounce: 38/42, 40/50, 50/60, 60/70",

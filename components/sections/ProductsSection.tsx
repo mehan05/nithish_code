@@ -2,15 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
 import { mockProducts } from "@/lib/mock-db";
 
 export default function ProductsSection() {
-  const triggerQuote = (productName: string) => {
-    if (typeof window !== "undefined" && (window as any).openQuoteModal) {
-      (window as any).openQuoteModal(productName);
-    }
-  };
+  const router = useRouter();
 
   const getCountryFlag = (code: string) => {
     const flags: { [key: string]: string } = {
@@ -117,7 +114,7 @@ export default function ProductsSection() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    triggerQuote(product.name);
+                    router.push(`/products/${product.slug}?quote=true`);
                   }}
                   className="flex-1 py-2.5 px-4 bg-[#2D6A4F] hover:bg-[#2D6A4F] text-white text-xs font-semibold rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm"
                 >

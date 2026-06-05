@@ -17,6 +17,7 @@ export default function PublicShell({ children }: PublicShellProps) {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [isBrochureOpen, setIsBrochureOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
+  const [selectedVariants, setSelectedVariants] = useState<string[] | undefined>(undefined);
 
   const isAdminRoute = pathname?.startsWith("/admin") || pathname?.startsWith("/login");
 
@@ -79,9 +80,10 @@ export default function PublicShell({ children }: PublicShellProps) {
     return () => clearTimeout(timer);
   }, [pathname, isAdminRoute]);
 
-  // Handler to open quote modal with a preselected product name
-  const handleOpenQuote = (productName?: string) => {
+  // Handler to open quote modal with a preselected product name and optional variants
+  const handleOpenQuote = (productName?: string, variants?: string[]) => {
     setSelectedProduct(productName || "");
+    setSelectedVariants(variants);
     setIsQuoteOpen(true);
   };
 
@@ -93,7 +95,8 @@ export default function PublicShell({ children }: PublicShellProps) {
   // for easy trigger from nested dynamic page elements!
   useEffect(() => {
     if (typeof window !== "undefined") {
-      (window as any).openQuoteModal = (productName?: string) => handleOpenQuote(productName);
+      (window as any).openQuoteModal = (productName?: string, variants?: string[]) =>
+        handleOpenQuote(productName, variants);
       (window as any).openBrochureModal = () => handleOpenBrochure();
     }
   }, []);
@@ -118,6 +121,7 @@ export default function PublicShell({ children }: PublicShellProps) {
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
         initialProduct={selectedProduct}
+        productVariants={selectedVariants}
       />
 
       {/* Brochure View Modal */}

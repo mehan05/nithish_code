@@ -2,12 +2,14 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { mockProducts, Product } from "@/lib/mock-db";
 import { Search, Filter, Check, ArrowRight } from "lucide-react";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
   const categories = ["all", "spices", "vegetables", "nuts"];
 
@@ -18,12 +20,6 @@ export default function ProductsPage() {
       product.variants.some(v => v.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
-  const triggerQuote = (productName: string) => {
-    if (typeof window !== "undefined" && (window as any).openQuoteModal) {
-      (window as any).openQuoteModal(productName);
-    }
-  };
 
   const getCountryFlag = (code: string) => {
     const flags: { [key: string]: string } = {
@@ -174,7 +170,7 @@ export default function ProductsPage() {
                 {/* Actions CTAs */}
                 <div className="px-6 pb-6 pt-0 flex gap-2 mt-auto">
                   <button
-                    onClick={() => triggerQuote(product.name)}
+                    onClick={() => router.push(`/products/${product.slug}?quote=true`)}
                     className="flex-1 py-2.5 px-4 bg-primary text-white text-xs font-semibold rounded-full hover:bg-accent transition-colors flex items-center justify-center gap-1.5"
                   >
                     Get Quote

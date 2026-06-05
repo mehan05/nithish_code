@@ -60,8 +60,8 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-[#1B4332] flex items-center justify-center transition-all duration-300 group-hover:rotate-12 shadow-sm">
-              <Leaf className="w-5 h-5 text-[#2D6A4F] fill-[#2D6A4F]/30" />
+            <div className="flex items-center justify-center transition-all duration-300 group-hover:scale-105">
+              <img src="/logo.png" alt="Plentra Exports" className="h-10 w-auto object-contain drop-shadow-sm" />
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-xl font-bold tracking-tight text-[#1B4332] leading-tight">
@@ -143,8 +143,8 @@ export default function Navbar({ onOpenQuoteModal, onOpenBrochureModal }: Navbar
         >
           <div className="flex items-center justify-between border-b border-[#D8F3DC] pb-4 mb-6">
             <Link href="/" className="flex items-center gap-2" onClick={handleLinkClick}>
-              <div className="w-8 h-8 rounded-full bg-[#1B4332] flex items-center justify-center">
-                <Leaf className="w-4 h-4 text-[#2D6A4F]" />
+              <div className="flex items-center justify-center">
+                <img src="/logo.png" alt="Plentra Exports" className="h-8 w-auto object-contain" />
               </div>
               <span className="font-serif text-lg font-bold text-[#1B4332]">Plentra Exports</span>
             </Link>

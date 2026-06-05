@@ -8,9 +8,11 @@ interface QuoteFormModalProps {
   isOpen: boolean;
   onClose: () => void;
   initialProduct?: string;
+  /** When provided, the Product Category dropdown shows these variants instead of all products */
+  productVariants?: string[];
 }
 
-export default function QuoteFormModal({ isOpen, onClose, initialProduct = "" }: QuoteFormModalProps) {
+export default function QuoteFormModal({ isOpen, onClose, initialProduct = "", productVariants }: QuoteFormModalProps) {
   const [companyName, setCompanyName] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [email, setEmail] = useState("");
@@ -189,19 +191,30 @@ export default function QuoteFormModal({ isOpen, onClose, initialProduct = "" }:
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold text-slate-700 uppercase tracking-wider">Product Category *</label>
+                  <label className="text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                    {productVariants ? "Product Variant *" : "Product Category *"}
+                  </label>
                   <select
                     value={productName}
                     onChange={(e) => setProductName(e.target.value)}
                     required
                     className="w-full h-10 px-2.5 border border-input rounded-lg text-sm bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none"
                   >
-                    <option value="" disabled>Select Commodity</option>
-                    {mockProducts.map((p) => (
-                      <option key={p.id} value={p.name}>
-                        {p.name}
-                      </option>
-                    ))}
+                    <option value="" disabled>
+                      {productVariants ? "Select Variant" : "Select Commodity"}
+                    </option>
+                    {productVariants
+                      ? productVariants.map((variant) => (
+                          <option key={variant} value={variant}>
+                            {variant}
+                          </option>
+                        ))
+                      : mockProducts.map((p) => (
+                          <option key={p.id} value={p.name}>
+                            {p.name}
+                          </option>
+                        ))
+                    }
                   </select>
                 </div>
                 <div className="flex flex-col gap-1.5">

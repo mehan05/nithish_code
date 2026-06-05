@@ -1,8 +1,9 @@
 "use client";
 
-import React, { use } from "react";
+import React, { use, useEffect } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { mockProducts, Product } from "@/lib/mock-db";
 import { Check, ArrowLeft, Send, Container, ShieldCheck, Globe, Star } from "lucide-react";
 
@@ -13,6 +14,8 @@ interface PageProps {
 export default function ProductDetailPage({ params }: PageProps) {
   const resolvedParams = use(params);
   const { slug } = resolvedParams;
+  const searchParams = useSearchParams();
+  const router = useRouter();
   
   const product = mockProducts.find((p) => p.slug === slug);
 
@@ -25,9 +28,21 @@ export default function ProductDetailPage({ params }: PageProps) {
 
   const triggerQuote = () => {
     if (typeof window !== "undefined" && (window as any).openQuoteModal) {
-      (window as any).openQuoteModal(product.name);
+      // Pass product.variants so the form shows subcategories for this specific product
+      (window as any).openQuoteModal(product.name, product.variants);
     }
   };
+
+  // Auto-trigger quote modal when arriving via ?quote=true (e.g. from product listing "Get Quote" button)
+  useEffect(() => {
+    if (searchParams.get("quote") === "true") {
+      // Small delay to ensure PublicShell has registered window.openQuoteModal
+      const timer = setTimeout(() => {
+        triggerQuote();
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [searchParams, slug]);
 
   const getCountryFlag = (code: string) => {
     const flags: { [key: string]: string } = {
@@ -218,7 +233,7 @@ export default function ProductDetailPage({ params }: PageProps) {
 
                   <div className="flex gap-2 mt-5">
                     <button
-                      onClick={() => triggerQuote()}
+                      onClick={() => router.push(`/products/${rel.slug}?quote=true`)}
                       className="flex-1 py-1.5 bg-primary text-white text-[11px] font-bold rounded-full hover:bg-accent transition-colors"
                     >
                       Quote

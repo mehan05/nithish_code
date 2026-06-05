@@ -83,6 +83,15 @@
   h1, h2, h3, .font-serif-heading {
     @apply font-serif;
   }
+  button, 
+  [type='button'], 
+  [type='reset'], 
+  [type='submit'],
+  [role='button'],
+  a,
+  select {
+    cursor: pointer;
+  }
 }
 
 /* ===== GLASS CARD ===== */
