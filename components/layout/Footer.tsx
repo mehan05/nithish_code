@@ -20,9 +20,16 @@ export default function Footer() {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const pathname = usePathname();
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (newsletterEmail.trim() === "") return;
+
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'newsletter', newsletterEmail })
+    });
+
     setIsSubscribed(true);
     setNewsletterEmail("");
     setTimeout(() => setIsSubscribed(false), 5000);

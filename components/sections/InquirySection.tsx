@@ -33,6 +33,21 @@ export default function InquirySection() {
         message
       });
 
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'quote',
+          companyName,
+          customerName,
+          email,
+          productName,
+          quantity,
+          country,
+          message
+        })
+      });
+
       if (typeof window !== "undefined") {
         console.log("GA4 custom event: quote_form_submit", { productName, country });
       }

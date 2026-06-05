@@ -49,6 +49,21 @@ export default function QuoteFormModal({ isOpen, onClose, initialProduct = "" }:
         message
       });
 
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'quote',
+          companyName,
+          customerName,
+          email,
+          productName,
+          quantity,
+          country,
+          message
+        })
+      });
+
       // Track Custom GA4-like Event if window is present
       if (typeof window !== "undefined") {
         console.log("GA4 custom event: quote_form_submit", { productName, country });
